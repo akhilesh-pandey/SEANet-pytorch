@@ -13,3 +13,5 @@ All the files including the instructions to use (readme.txt) is available in the
 ## Highest validation accuracy:
 ### CIFAR-10 : 95.7
 ### CIFAR-100 : 78.67
+
+GitHub doesn't allow larger files so if you want the pretrained weights you can download from here: https://my.pcloud.com/publink/show?code=kZ2Ntl7ZqyfINXwGJaHGmVzp4k933VREEkTy
