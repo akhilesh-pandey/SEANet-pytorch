@@ -1,5 +1,3 @@
-#source: https://github.com/moskomule/senet.pytorch
-
 import math
 
 import torch.nn as nn

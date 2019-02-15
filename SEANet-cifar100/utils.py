@@ -82,7 +82,7 @@ class Trainer(object):
             state = {"epoch": epoch, "state_dict": self.model.state_dict(), "optimizer": self.optimizer.state_dict(), "best_acc1":self.best_acc1}
             if not model_out_path.exists():
                 model_out_path.mkdir()
-            torch.save(state, "best_model.pth")
+            torch.save(state, model_out_path / "best_model.pth".format(epoch))
     
     def load(self, path="best_model.pth"):
         checkpoint= torch.load(path)

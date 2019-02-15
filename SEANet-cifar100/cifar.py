@@ -9,7 +9,7 @@ from baseline import resnet20
 from utils import Trainer
 
 
-def get_dataloader(batch_size, root="~/cifar10"):
+def get_dataloader(batch_size, root="~/cifar100"):
     root = Path(root).expanduser()
     if not root.exists():
         root.mkdir()
@@ -37,7 +37,7 @@ def main(batch_size, baseline, reduction):
     if baseline:
         model = resnet20()
     else:
-        model = se_resnet20(num_classes=10, reduction=reduction)
+        model = se_resnet20(num_classes=100, reduction=reduction)
     optimizer = optim.SGD(params=model.parameters(), lr=1e-1, momentum=0.9,
                           weight_decay=1e-4)
     scheduler = optim.lr_scheduler.StepLR(optimizer, 80, 0.1)
